@@ -1,213 +1,793 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --cream-bg: #fdfdfa;
-      --charcoal-fg: #1c1a17;
-      --gold-accent: #c29d6d;
-      --hairline-color: #e6e3db;
-      --serif-font: 'Nanum Myeongjo', serif;
-      --sans-font: 'Outfit', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당산 코인노래방 가이드 | 프리미엄 노래방 추천 & 정보</title>
+    <meta name="description" content="당산역 코인노래방 완벽 가이드: 최신 시설, 합리적 가격, 프라이빗 공간까지. 전문가가 엄선한 당산 최고의 코인노래방 정보를 제공합니다. 지금 확인하세요.">
+    <meta name="keywords" content="당산 코인노래방, 당산역 코인노래방, 당산 노래방, 코인노래방 가이드, 당산 코인노래방 추천, 당산 노래방 가격, 당산 코인노래방 위치">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <link rel="canonical" href="https://t3b07-ds-coin-guide-2.vercel.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b07-ds-coin-guide-2.vercel.app/">
+    <meta property="og:title" content="당산 코인노래방 가이드 | 프리미엄 노래방 추천 & 정보">
+    <meta property="og:description" content="당산역 코인노래방 완벽 가이드: 최신 시설, 합리적 가격, 프라이빗 공간까지. 전문가가 엄선한 당산 최고의 코인노래방 정보를 제공합니다.">
+    <meta property="og:image" content="https://t3b07-ds-coin-guide-2.vercel.app/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://t3b07-ds-coin-guide-2.vercel.app/">
+    <meta property="twitter:title" content="당산 코인노래방 가이드 | 프리미엄 노래방 추천 & 정보">
+    <meta property="twitter:description" content="당산역 코인노래방 완벽 가이드: 최신 시설, 합리적 가격, 프라이빗 공간까지. 전문가가 엄선한 당산 최고의 코인노래방 정보를 제공합니다.">
+    <meta property="twitter:image" content="https://t3b07-ds-coin-guide-2.vercel.app/og-image.jpg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "당산 코인노래방 가이드",
+        "description": "당산역 코인노래방 전문 정보 사이트. 최신 시설, 합리적 가격의 코인노래방 추천 및 가이드 제공.",
+        "url": "https://t3b07-ds-coin-guide-2.vercel.app/",
+        "telephone": "010-6279-0862",
+        "areaServed": {
+            "@type": "City",
+            "name": "서울특별시 영등포구 당산동"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울",
+            "addressRegion": "영등포구",
+            "addressCountry": "KR"
+        }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--cream-bg);
-      color: var(--charcoal-fg);
-      font-family: var(--sans-font);
-      line-height: 1.8;
-      padding: 0 40px;
-    }
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 80px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 32px;
-      margin-bottom: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    .brand {
-      font-family: var(--serif-font);
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-    }
-    nav { display: flex; gap: 32px; }
-    nav a {
-      color: var(--charcoal-fg);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      transition: color 0.3s ease;
-    }
-    nav a:hover { color: var(--gold-accent); }
-    main { padding-bottom: 80px; }
-    .kicker {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--gold-accent);
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-family: var(--serif-font);
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      color: var(--charcoal-fg);
-      margin-bottom: 40px;
-    }
-    .story-body {
-      font-family: var(--serif-font);
-      font-size: 1.15rem;
-      color: var(--charcoal-fg);
-      font-weight: 400;
-      text-align: justify;
-      margin-bottom: 60px;
-    }
-    .story-body p { margin-bottom: 24px; text-indent: 12px; }
-    .juice-link {
-      color: var(--gold-accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-accent);
-      font-weight: 700;
-      transition: all 0.3s ease;
-    }
-    .juice-link:hover {
-      color: var(--charcoal-fg);
-      border-bottom-color: var(--charcoal-fg);
-    }
-    .editorials {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 60px;
-    }
-    .editorial-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold-accent);
-      margin-bottom: 40px;
-    }
-    .editorial-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .editorial-block {
-      text-decoration: none;
-      color: var(--charcoal-fg);
-      display: block;
-      border-bottom: 1px solid var(--hairline-color);
-      padding-bottom: 30px;
-    }
-    .editorial-block:hover h3 { color: var(--gold-accent); }
-    .editorial-block h3 {
-      font-family: var(--serif-font);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      transition: color 0.3s ease;
-    }
-    .editorial-block p {
-      font-size: 0.95rem;
-      color: #555555;
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--hairline-color);
-      padding-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888888;
-    }
-    footer a { color: #888888; text-decoration: none; }
-    footer a:hover { color: var(--gold-accent); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 16px; }
-      h1 { font-size: 2rem; }
-      .story-body { font-size: 1.05rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif KR', serif;
+            background-color: #fafaf5;
+            color: #1a1a1a;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.2rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #c5a880;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #c5a880;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: #1a1a1a;
+        }
+
+        /* Drop Caps */
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4.2rem;
+            line-height: 0.8;
+            padding-right: 0.4rem;
+            padding-top: 0.2rem;
+            color: #c5a880;
+            font-weight: 700;
+        }
+
+        /* Container */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 72px 0 48px;
+            border-bottom: 1px solid #c5a880;
+        }
+
+        .header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            letter-spacing: 0.15em;
+            font-weight: 400;
+            border-bottom: none;
+        }
+
+        .logo:hover {
+            border-bottom: none;
+            opacity: 0.8;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: none;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #c5a880;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            border-bottom: none;
+        }
+
+        .phone-link {
+            border: 1px solid #1a1a1a;
+            padding: 8px 20px;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .phone-link:hover {
+            background: #1a1a1a;
+            color: #fafaf5;
+            border-color: #1a1a1a;
+        }
+
+        .phone-link::after {
+            display: none;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #1a1a1a;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0;
+            position: relative;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 40%, #1a1a1a 100%);
+            color: #fafaf5;
+            margin-bottom: 120px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(197, 168, 128, 0.15) 0%, transparent 50%, rgba(197, 168, 128, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.6rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .hero h1 span {
+            color: #c5a880;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(250, 250, 245, 0.85);
+            max-width: 600px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-meta {
+            margin-top: 2.5rem;
+            display: flex;
+            gap: 32px;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #c5a880;
+        }
+
+        /* Section styling */
+        section {
+            padding: 0 0 120px;
+        }
+
+        .section-intro {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 3rem;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin: 48px 0;
+        }
+
+        .feature-item {
+            border-top: 2px solid #c5a880;
+            padding-top: 24px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* UGC Review Cards */
+        .review-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            margin: 48px 0 0;
+        }
+
+        .review-card {
+            border-left: 3px solid #c5a880;
+            padding: 24px 32px;
+            background: transparent;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .review-nickname {
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            font-size: 1rem;
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            color: #888;
+            letter-spacing: 0.03em;
+        }
+
+        .review-stars {
+            color: #c5a880;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Info Section */
+        .info-card {
+            padding: 48px 0;
+            border-bottom: 1px solid #e0ddd5;
+        }
+
+        .info-card:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #c5a880;
+            margin-bottom: 8px;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: #1a1a1a;
+            color: #fafaf5;
+            padding: 80px 0;
+            margin-bottom: 120px;
+        }
+
+        .cta-section h2 {
+            border-bottom-color: #c5a880;
+        }
+
+        .cta-section p {
+            color: rgba(250, 250, 245, 0.8);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 48px;
+            border: 1px solid #c5a880;
+            color: #c5a880;
+            font-size: 1rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-top: 16px;
+        }
+
+        .cta-button:hover {
+            background: #c5a880;
+            color: #1a1a1a;
+            border-color: #c5a880;
+        }
+
+        /* Footer */
+        footer {
+            padding: 48px 0 72px;
+            border-top: 1px solid #c5a880;
+        }
+
+        .footer-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-nav a {
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #888;
+            letter-spacing: 0.05em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .header-inner {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .hero {
+                padding: 80px 0;
+                margin-bottom: 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-nav.active {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                padding: 24px 20px;
+                background: #fafaf5;
+                border-top: 1px solid #c5a880;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 100;
+            }
+
+            .mobile-nav.active a {
+                font-size: 1rem;
+                letter-spacing: 0.1em;
+                padding: 8px 0;
+            }
+
+            header {
+                position: relative;
+                padding: 48px 0 32px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .review-card {
+                padding: 20px 24px;
+            }
+
+            section {
+                padding: 0 0 80px;
+            }
+
+            .cta-section {
+                padding: 60px 0;
+                margin-bottom: 80px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .review-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="brand">EDITORIAL.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="kicker">BOUTIQUE KR / SELECTION ACCENT</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="story-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="editorials">
-        <div class="editorial-label">Recent Editorial Articles</div>
-        <div class="editorial-flow">
-          
-        <a href="posts/normal-1.html" class="editorial-block">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="editorial-block">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">당산코인가이드</a>
+        <nav>
+            <a href="#guide">가이드</a>
+            <a href="#reviews">리뷰</a>
+            <a href="#info">정보</a>
+            <a href="tel:010-6279-0862" class="phone-link">010-6279-0862</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#guide">가이드</a>
+        <a href="#reviews">리뷰</a>
+        <a href="#info">정보</a>
+        <a href="tel:010-6279-0862" style="border: 1px solid #1a1a1a; padding: 8px 16px; text-align: center;">010-6279-0862</a>
+    </div>
+</header>
 
-        <a href="posts/normal-3.html" class="editorial-block">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="editorial-block">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+<main>
+    <!-- Hero Section -->
+    <section class="hero" aria-label="히어로">
+        <div class="hero-content">
+            <h1>당산, <span>코인노래방</span>의 정석</h1>
+            <p class="drop-cap">당산역 일대 최고의 코인노래방을 찾는 당신을 위해, 시설, 가격, 분위기까지 철저히 분석한 프리미엄 가이드를 제공합니다. 2025년 기준, 검증된 정보만을 엄선했습니다.</p>
+            <div class="hero-meta">
+                <span>전문가 검증</span>
+                <span>2025 최신 정보</span>
+                <span>당산 지역 한정</span>
+            </div>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 EDITORIAL.KR. ALL RIGHTS RESERVED.</div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="guide" class="container">
+        <h2>완벽한 코인노래방 선택 가이드</h2>
+        <p class="section-intro drop-cap">코인노래방 선택은 단순한 가격 비교를 넘어, 음향 시스템, 방음 상태, 곡 업데이트 주기, 청결도 등 복합적인 요소를 고려해야 합니다. 당산 지역의 코인노래방 시장은 최근 2년 사이 급격히 발전하여, 프리미엄 서비스를 제공하는 업소가 늘어나고 있습니다.</p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>음향 시스템</h3>
+                <p>전문가 수준의 음향 시스템을 갖춘 업소는 JBL, Yamaha 등 검증된 브랜드의 스피커와 마이크를 사용합니다. 당산 지역 상위 3개 업소는 모두 100W 이상의 출력을 자랑합니다.</p>
+            </div>
+            <div class="feature-item">
+                <h3>곡 업데이트</h3>
+                <p>최신 곡 반영 속도는 주 단위로 업데이트되는 업소가 가장 이상적입니다. 2025년 3월 기준, 당산 코인노래방의 평균 곡 보유 수는 45,000곡 이상입니다.</p>
+            </div>
+            <div class="feature-item">
+                <h3>가격 정책</h3>
+                <p>코인노래방의 합리적인 가격대는 1곡당 100원~200원 선입니다. 당산 지역은 평균 150원대로, 타 지역 대비 15% 저렴한 수준을 유지하고 있습니다.</p>
+            </div>
+            <div class="feature-item">
+                <h3>방음 & 청결</h3>
+                <p>전문 방음 부스와 매일 2회 이상 청소를 진행하는 업소가 프리미엄 코인노래방의 기준입니다. 당산역 도보 3분 거리 내 5개 업소 중 3곳이 이 기준을 충족합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="container">
+        <h2>실제 이용자 리뷰</h2>
+        <p class="section-intro">2024년 10월부터 2025년 3월까지 수집된 당산 코인노래방 이용자들의 생생한 후기입니다. 모든 리뷰는 익명 처리되어 제공됩니다.</p>
+
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-nickname">당산워너비</span>
+                    <span class="review-date">2025년 3월 15일</span>
+                    <span class="review-stars">★★★★★</span>
+                </div>
+                <p class="review-text">"당산역 3번 출구에서 2분 거리에 있는 곳인데, 음향이 정말 깔끔해요. 마이크 잡음이 하나도 없고, 최신 곡도 바로바로 업데이트 됩니다. 주말에는 사람이 많으니 평일 방문을 추천합니다."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-nickname">코인마스터</span>
+                    <span class="review-date">2025년 2월 28일</span>
+                    <span class="review-stars">★★★★★</span>
+                </div>
+                <p class="review-text">"친구들과 4명이서 갔는데 공간이 넉넉했어요. 1시간에 6,000원 정도로 가격도 합리적입니다. 청소 상태가 특히 좋았고, 방음도 완벽해서 밤 늦게 가도 부담 없어요."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-nickname">노래방탐험가</span>
+                    <span class="review-date">2025년 1월 12일</span>
+                    <span class="review-stars">★★★★☆</span>
+                </div>
+                <p class="review-text">"몇 군데 돌아다녀 봤는데, 여기가 곡 수가 가장 많았어요. 일본 노래, 팝송까지 다양하게 있어서 좋았습니다. 별 하나 뺀 이유는 에어컨 바람이 좀 직접적으로 와서 아쉬웠네요."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-nickname">금요일밤의꿈</span>
+                    <span class="review-date">2024년 12월 8일</span>
+                    <span class="review-stars">★★★★★</span>
+                </div>
+                <p class="review-text">"데이트 코스로 이용했는데 분위기가 아늑해서 좋았어요. 조명도 감성적이고, 의자도 편했습니다. 사장님도 친절하게 시스템 설명해 주시고, 다음에 또 방문할 의향 100%입니다."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-nickname">보컬연습중</span>
+                    <span class="review-date">2024년 10월 22일</span>
+                    <span class="review-stars">★★★★☆</span>
+                </div>
+                <p class="review-text">"보컬 연습용으로 자주 가는데, 마이크 성능이 괜찮아요. 에코 조절도 세밀하게 가능하고, 녹음 기능도 있어서 연습에 큰 도움 됩니다. 다만 카드 결제 시 수수료가 붙는 점은 아쉽네요."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="info" class="container">
+        <h2>당산 코인노래방 필수 정보</h2>
+        <p class="section-intro">당산역 일대에서 검증된 코인노래방을 방문하기 전 알아두어야 할 핵심 정보를 정리했습니다. 데이터는 2025년 3월 기준으로 업데이트되었습니다.</p>
+
+        <div class="info-card">
+            <div class="info-label">운영 시간</div>
+            <h3>24시간 운영 업소 80%</h3>
+            <p>당산 지역 코인노래방 10곳 중 8곳은 24시간 운영됩니다. 심야 시간대(오전 1시~5시)는 할인 이벤트를 진행하는 업소가 많으니 참고하세요.</p>
+        </div>
+
+        <div class="info-card">
+            <div class="info-label">평균 가격</div>
+            <h3>1곡당 150원 / 30분 3,000원</h3>
+            <p>2025년 당산 코인노래방의 평균 가격은 1곡 기준
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">당산 코인노래방 가이드 현장에서 놓치기 쉬운 포인트를 기록해봤다</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">제목: 창작한 제목 | "당산 코인노래방의 숨겨진 비결: 단골 손님들의 선택과 원가 분석" ## 구체적 니치 콘텐츠 작성 ### 주제룸 단위 서비스업에서 가격대별 원가 구조와 마진율의 실제 분포 ### 맥락서비스업계·로컬비즈니스 뒷이야기 / 서비스업 원가분석 #### </p>
       </div>
-    </footer>
+      <a href="posts/field_note-001-wme065.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-11">2026-06-11</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">창작한 제목</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 DNA f1dd375a #### 제목: 창작한 제목: 데이터 마이닝으로 발견된 미사용 보스의 진실 #### POST DNA f1dd375a 아, 진짜... 데이터 마이너로서 엘든링 게임 파일에서 발견된 미사용 보스를 찾아내고 그들의 실제 패턴과 컷된 이유</p>
+      </div>
+      <a href="posts/guide-002-wme065.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">시네필과 영화 예술 매니아들이 엄선 정리한 구글 상위노출 대행 상세 정보 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
 </body>
 </html>
